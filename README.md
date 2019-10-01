@@ -59,7 +59,7 @@ nano t.py
 git add t.py 
 ```
 
-### Salva o snapshot no histórico do projeto e conclui o processo de controle de alterações. Qualquer coisa que tenha sido definida pelo git add para ser versionada torna-se parte do snapshot
+### Salva o snapshot no histórico do projeto e conclui o processo de controle de alterações. 
 
 ```
 git commit -m "novo programa python"
