@@ -102,6 +102,10 @@ git checkout master
 cat z.py
 ```
 
+## Merge de branch com branch principal
+
+## Resolvendo conflitos após merge
+
 ```
 nano t.py 
 git status
