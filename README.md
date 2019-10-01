@@ -9,6 +9,7 @@ Demonstrações de comandos git
 mkdir rep
 cd rep/
 nano t.py
+nano z.py
 ```
 ### Inicia repositório
 ```
@@ -23,6 +24,7 @@ git status
 ### Adiciona arquivo para ser versionado
 ```
 git add t.py 
+git add z.py 
 ```
 
 ### Mostra que agora o arquivo está sendo versionado
@@ -36,10 +38,17 @@ git rm --cached t.py
 git status
 ```
 
+### Obtendo cópia de um repositório remoto:
+```
+mkdir ~/rep-local
+cd ~/rep-local/
+git clone localhost:~/rep .
+git status
+```
+
 ## Gerenciando alterações
 
 ### cria uma branch master no repositório
-
 ```
 git push --set-upstream localhost:~/rep master
 ```
@@ -50,7 +59,7 @@ nano t.py
 git add t.py 
 ```
 
-### Preara arquivos para gerar uma nova versão no repositório
+### Prepara arquivos para gerar uma nova versão no repositório
 ```
 git commit -m "novo programa python"
 ```
@@ -58,6 +67,11 @@ git commit -m "novo programa python"
 ### Confirma nova versão
 ```
 git push 
+```
+
+### Verifica lista da últimas alterações feitas no repositório
+```
+git log 
 ```
 
 ## Gerenciando Branches
@@ -71,10 +85,4 @@ git commit -m "nova mensagem no programa"
 git push
 ```
 
-### nó remoto:
 
-```
-mkdir ~/rep-local
-cd ~/rep-local/
-git clone localhost:~/rep .
-```
