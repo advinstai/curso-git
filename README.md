@@ -38,7 +38,7 @@ git rm --cached t.py
 git status
 ```
 
-### Obtendo cópia de um repositório remoto:
+### Obtendo cópia de um repositório remoto
 ```
 mkdir ~/rep-local
 cd ~/rep-local/
