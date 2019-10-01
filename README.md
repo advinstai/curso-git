@@ -1,5 +1,8 @@
 # git
-Curso sobre git
+
+Demonstrações de comandos git
+
+## Controlando Versionamento
 
 ### cria um diretório para ser versionado
 ```
@@ -12,7 +15,7 @@ nano t.py
 git init
 ```
 
-### Verifica estado de cada arquivo
+### Verifica estado dos arquivos do repositório
 ```
 git status
 ```
@@ -23,30 +26,42 @@ git add t.py
 ```
 
 ### Mostra que agora o arquivo está sendo versionado
-
 ```
 git status
 ```
 
 ### Retirando o versionamento do arquivo
-
-```git rm --cached t.py
-  git status
+```
+git rm --cached t.py
+git status
 ```
 
-```
-git commit -m "novo programa python"
-```
-
-```
-git push localhost:~/rep
-```
+## Gerenciando alterações
 
 ### cria uma branch master no repositório
 
 ```
 git push --set-upstream localhost:~/rep master
 ```
+
+### Adiciona um arquivo para ser versionado
+```
+nano t.py
+git add t.py 
+```
+
+### Preara arquivos para gerar uma nova versão no repositório
+```
+git commit -m "novo programa python"
+```
+
+### Confirma nova versão
+```
+git push 
+```
+
+## Gerenciando Branches
+
 
 ```
 nano t.py 
