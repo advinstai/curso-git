@@ -46,7 +46,7 @@ git clone localhost:~/rep .
 git status
 ```
 
-## Gerenciando alterações
+## Gerenciando Alterações
 
 ### Cria uma branch master no repositório
 ```
@@ -76,6 +76,32 @@ git log
 ```
 
 ## Gerenciando Branches
+
+### Criando uma Branch
+```
+git branch my-branch
+```
+
+## Mudando de Branch
+```
+git checkout my-branch
+```
+
+## Alterando um arquivo em uma branch
+```
+cat z.py
+```
+
+## Volta para a Branch principal
+```
+git checkout master
+```
+
+## Versão do arquivo na branch principal
+```
+cat z.py
+```
+
 ```
 nano t.py 
 git status
