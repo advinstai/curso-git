@@ -4,7 +4,7 @@ Demonstrações de comandos git
 
 ## Controlando Versionamento
 
-### cria um diretório para ser versionado
+### Cria um diretório para ser versionado
 ```
 mkdir rep
 cd rep/
@@ -48,7 +48,7 @@ git status
 
 ## Gerenciando alterações
 
-### cria uma branch master no repositório
+### Cria uma branch master no repositório
 ```
 git push --set-upstream localhost:~/rep master
 ```
@@ -59,12 +59,13 @@ nano t.py
 git add t.py 
 ```
 
-### Prepara arquivos para gerar uma nova versão no repositório
+### Salva o snapshot no histórico do projeto e conclui o processo de controle de alterações. Qualquer coisa que tenha sido definida pelo git add para ser versionada torna-se parte do snapshot
+
 ```
 git commit -m "novo programa python"
 ```
 
-### Confirma nova versão
+### Atualiza o repositório remoto com quaisquer confirmações feitas localmente em um commit
 ```
 git push 
 ```
@@ -75,8 +76,6 @@ git log
 ```
 
 ## Gerenciando Branches
-
-
 ```
 nano t.py 
 git status
