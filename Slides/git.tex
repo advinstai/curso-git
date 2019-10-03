@@ -42,52 +42,37 @@
 \SliT{Sumário}{
 
 \begin{itemize}
-      \IteOne{Git}
+    \IteOne{Conceitos}
+    \IteOne{Comandos}
+    \IteOne{Github}
+    \IteOne{Fluxos para Gerenciamento de Código}
  \end{itemize}
 
 }
 
 \SliT{Git}{
 
+Características elementares do Git
+
 \begin{itemize}
-    \IteOne{Projetado para fazer o controle de versão no kernel do Linux}
-    \IteOne{Objetivos do Git:}
-    \IteOne{Rapidez}
-    \IteOne{Suporte para desenvolvimento não linear (milhares de ramos paralelos)}
-    \IteOne{Totalmente distribuído}
-    \IteOne{Capaz de lidar com grandes projetos com eficiência}
+    \IteOne{É um sistema de controle de versão de arquivos que rastreia o histórico de mudanças à medida que pessoas e equipes colaboram nos projetos juntos. }
+    \IteOne{ Provê mecanismos para tornar mais controlado o processo de executar testes, corrigir erros e contribuir com novos fragmentos de código}
+    \IteOne{ Permite recuperar quaiquer versões anteriores}
 \end{itemize}
-}
-
-\SliT{Git}{
-
-\begin{itemize}
-    \IteOne{Git website: http://git-scm.com/}
-    \IteOne{Livro online: http://git-scm.com/book}
-    \IteOne{Página de Referência: http://gitref.org/index.html}
-    \IteOne{Tutorial: http://schacon.github.com/git/gittutorial.html}
-    \IteOne{At command line: (where verb = config, add, commit, etc.)}
- \end{itemize}
-}
-
-\SliT{Git}{
-
-\begin{itemize}
-      \IteOne{Repositórios}
-      \IteOne{Atualizar arquivos}
-      \IteOne{Criando Branches}
- \end{itemize}
 
 }
 
 \SliT{Git}{
 
-Comandos Git:
+Características elementares do Git
+
 \begin{itemize}
-      \IteOne{git add}
-      \IteOne{git commit}
-      \IteOne{git push}
- \end{itemize}
+    \IteOne{Provê um controle de versionamento completamente distribuído.}
+    \IteOne{Não precisa de uma conexão constante com um repositório central, assim os desenvolvedores podem trabalhar em qualquer lugar e colaborar de forma assíncrona}
+    \IteOne{Permite gerenciar as alterações localmente, antes de enviar para uma instância remota}
+    \IteOne{Inicialmente projetado para fazer o controle de versão no kernel do Linux, mas na prática é uma das ferramentas mais utilizadas para desenvolvimento colaborativo de software }
+
+\end{itemize}
 
 }
 
@@ -98,10 +83,178 @@ Comandos Git:
     \end{center}
 }
 
+
+
+\SliT{Comandos Git}{
+
+\begin{itemize}
+      \IteOne{git init inicializa um novo repositório Git e começa a rastrear um diretório existente.} 
+
+      \IteOne{git add (arquivo) controla as alterações de um arquivo no repositório local} 
+
+      \IteOne{git commit salva o snaphsot no histórico do projeto e conclui o processo de controle de alterações. }
+
+      \IteOne{git status  mostra o status das alterações como não rastreadas, modificadas ou preparadas.}
+
+      \IteOne{git push atualiza o repositório remoto com quaisquer confirmações feitas localmente em uma branch.}
+      
+\end{itemize}
+
+}
+
+\SliT{Comandos Git}{
+
+\begin{center}
+    \includegraphics[scale=0.35]{git11.jpg}     
+    \end{center}
+}
+
+\SliT{Comandos Git}{
+
+\begin{itemize}
+
+      \IteOne{git clone cria uma cópia local de um projeto que já existe remotamente. O clone inclui todos os arquivos, histórico e branches do projeto.}
+
+    \IteOne{git pull atualiza o repositório local com atualizações do repositório remoto. }
+      
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale=0.35]{git21.png}     
+    \end{center}
+}
+
+\SliT{Comandos Git}{
+
+\begin{itemize}
+          
+      \IteOne{git branch mostra a branch local atual.}
+
+      \IteOne{git branch (nome) cria uma nova branch.}
+      
+      \IteOne{git checkout (nome-branch) troca para outra branch.}
+      
+      \IteOne{git diff mostra a diferença entre duas branches distintas. }
+
+      \IteOne{git merge é  usado para combinar alterações feitas em duas branches distintas. }
+
+\end{itemize}
+
+}
+
+\SliT{Git}{
+
+\begin{center}
+    \includegraphics[scale=0.35]{git2.jpg}     
+    \end{center}
+}
+
+\SliT{Conflito de Versões}{
+
+\begin{itemize}
+          
+      \IteOne{Conflitos são situações em que o git não consegue atualizar um arquivo com uma nova versão da branch automaticamente}
+      
+      \IteOne{Nesses casos o git avisa essa situação e pede para que o desenvolvedor resolva os conflitos}
+\end{itemize}
+
+Exemplo de conflito:
+
+\begin{block}{block title}
+<<<<<<< branch1 
+#include "test.h" 
+ 
+int main() 
+{ 
+   return 0; 
+} 
+ 
+======= 
+// needed a source code file 
+>>>>>>> master 
+\end{block}
+
+}
+
+\SliT{GitHub}{
+GitHub.com é um site para armazenamento de repositórios Git.
+\begin{itemize}
+  \IteOne{Um usuário cadastrado no Github:}
+    \IteTwo{Envia seus repositórios locais para serem armazenados no Github}
+    \IteTwo{Utiliza o git para controlar o repositório localmente}
+\end{itemize}
+
+Principais funcionalidades do Github:
+\begin{itemize}
+    \IteOne{Issue: incluir um pedido de alteração, descrever um bug, ou sugestão de melhoria, etc}
+    \IteOne{Fork: replica o repositório, mantendo uma relação com o repositório principal}
+    \IteOne{Pull request}
+    \IteTwo{permite a partir do repositório replicado com fork, pedir para que seja feita a sincronização}
+    \IteTwo{Proprietário do repositório replicado autorização ou não tal sincronização}
+\end{itemize}
+}
+
+\SliT{Github}{
+\begin{center}
+    \includegraphics[scale=0.35]{git3.jpg}     
+    \end{center}
+}
+
+\SliT{Github - Issue}{
+\begin{center}
+    \includegraphics[scale=0.35]{issue.png}     
+    \end{center}
+}
+
+\SliT{Github - Issue}{
+\begin{center}
+    \includegraphics[scale=0.35]{issue2.png}     
+    \end{center}
+}
+
+\SliT{Github - Issue}{
+\begin{center}
+    \includegraphics[scale=0.35]{issue3.png}     
+    \end{center}
+}
+
+\SliT{Github - Fork}{
+\begin{center}
+    \includegraphics[scale=0.35]{mainrep.png}     
+    \end{center}
+}
+
+\SliT{Github - Fork}{
+\begin{center}
+    \includegraphics[scale=0.35]{main-forked.png}     
+    \end{center}
+}
+
+\SliT{Github - Pull Request}{
+\begin{center}
+    \includegraphics[scale=0.35]{pull-request.png}     
+    \end{center}
+}
+
+\SliT{Github - Pull Request}{
+\begin{center}
+    \includegraphics[scale=0.35]{pullre1.png}     
+    \end{center}
+}
+
+\SliT{Referências}{
+
+\begin{itemize}
+    \IteOne{Site Git: http://git-scm.com/}
+    \IteOne{Github : https://github.com}
+    \IteOne{Materiais sobre git : https://try.github.io/}
+    \IteOne{Na linha de comando: git help comando}
+ \end{itemize}
+}
+
 % SLIDE NO TITLE
 \Sli{
 \secx{Dúvidas}
-
 }
 
 \end{document}
