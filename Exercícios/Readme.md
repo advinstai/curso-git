@@ -13,11 +13,11 @@ O programa deve girar a matrix uma quantidade de vezes e imprimir a matriz resul
 A rotação de uma matriz é representada pela figura a seguir. 
 
 ```
-início        primeira rotação  Segunda rotação <p>
- 1 2 3 4      2  3  4  5       3  4  5  6 <p>
-12 1 2 5  ->  1  2  3  6 ->     2  3  4  7 <p>
-11 4 3 6      12  1  4  7         1  2  1  8 <p>
-10 9 8 7      11 10  9  8       12 11 10  9 <p>
+início        primeira rotação  Segunda rotação 
+ 1 2 3 4      2  3  4  5       3  4  5  6 
+12 1 2 5  ->  1  2  3  6 ->     2  3  4  7 
+11 4 3 6      12  1  4  7         1  2  1  8 
+10 9 8 7      11 10  9  8       12 11 10  9 
 ```
 
 ## Desafio 2
