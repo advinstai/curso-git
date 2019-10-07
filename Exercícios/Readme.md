@@ -1,6 +1,5 @@
 
-Crie uma rotina que gera entradas aleatoriamente
-Após executar os algoritmos gere a saída em um arquivo texto
+Crie uma rotina que gera entradas aleatoriamente, e mostre o resultado da execução de cada desafio em um arquivo texto.
 
 ## Desafio 1
 
