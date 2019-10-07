@@ -2,7 +2,7 @@
 Crie uma rotina que gera entradas aleatoriamente
 Após executar os algoritmos gere a saída em um arquivo texto
 
-Desafio 1
+## Desafio 1
 
 A entrada é uma matriz bidimensional, 
 
@@ -16,7 +16,7 @@ início         primeira rotação  Segunda rotação
 11 4 3 6      12  1  4  7         1  2  1  8
 10 9 8 7      11 10  9  8       12 11 10  9
 
-Desafio 2
+## Desafio 2
 
 Para duas cadeias A e B, definimos a semelhança das cadeias como sendo o comprimento do prefixo mais longo comum a ambas as cadeias. Por exemplo, a similaridade das cadeias "abc" e "abd" é 2, enquanto a similaridade das cadeias "aaa" e "aaab" é 3.
 
@@ -38,7 +38,7 @@ Cada uma das próximas t linhas contém uma string para processar.
 
 A saída é gerada da seguinte forma: Linhas t de saída, cada uma contendo a resposta para o caso de teste correspondente.
 
-Desafio 3
+## Desafio 3
 
 Greg quer construir uma String S, de comprimento N. Começando com uma string vazia, ele pode executar operações:
 
@@ -55,7 +55,7 @@ As linhas subseqüentes descrevem um caso de teste em duas linhas:
 A primeira linha contém 3 números inteiros separados por espaço, N , A, e B, respectivamente.
 A segunda linha contém S (a string que Greg deseja construir).
 
-Desafio 4
+## Desafio 4
 
 
 Tieu é dono de uma pizzaria e a administra à sua maneira. Enquanto em um restaurante normal, um cliente é atendido seguindo a regra de primeiro a chegar, primeiro a ser atendido, Tieu simplesmente minimiza o tempo médio de espera de seus clientes. Então, ele decide quem é servido primeiro, independentemente de quanto mais cedo ou mais tarde uma pessoa vier.
@@ -69,8 +69,7 @@ Formato de Entrada
 A primeira linha contém um número inteiro N, que é o número de clientes.
 Nas próximas N linhas, a i-ésima linha contém dois números separados por espaço Ti e Li. Ti é o momento em que o cliente pede uma pizza, e Li é o tempo necessário para cozinhar essa pizza.
 
-
-Desafio 5
+## Desafio 5
 
 Há um número de plantas em um jardim. Cada uma dessas plantas foi tratada com uma certa quantidade de pesticida. Após cada dia, se alguma planta tiver mais pesticida que a esquerda, sendo mais fraca que a esquerda, ela morre.
 
