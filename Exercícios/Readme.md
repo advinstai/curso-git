@@ -1,4 +1,7 @@
 
+## Crie seu perfil no git hub
+## Coloque os exercícios realizados na sua área no git
+
 Crie uma rotina que gera entradas aleatoriamente, e mostre o resultado da execução de cada desafio em um arquivo texto.
 
 ## Desafio 1
