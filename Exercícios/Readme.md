@@ -11,13 +11,13 @@ A entrada é uma matriz bidimensional,
 O programa deve girar a matrix uma quantidade de vezes e imprimir a matriz resultante ao final. A rotação deve estar no sentido anti-horário.
 
 A rotação de uma matriz é representada pela figura a seguir. 
-
-início         primeira rotação  Segunda rotação
+<p>
+início         primeira rotação  Segunda rotação <p>
  1 2 3 4        2  3  4  5       3  4  5  6 <p>
 12 1 2 5  ->   1  2  3  6 ->     2  3  4  7 <p>
 11 4 3 6      12  1  4  7         1  2  1  8 <p>
 10 9 8 7      11 10  9  8       12 11 10  9 <p>
-
+<p>
 ## Desafio 2
 
 Para duas cadeias A e B, definimos a semelhança das cadeias como sendo o comprimento do prefixo mais longo comum a ambas as cadeias. Por exemplo, a similaridade das cadeias "abc" e "abd" é 2, enquanto a similaridade das cadeias "aaa" e "aaab" é 3.
