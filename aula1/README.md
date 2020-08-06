@@ -1,6 +1,4 @@
-# git teste
-
-Demonstrações de comandos git
+# Demonstrações de comandos git
 
 ## Controlando Versionamento
 
@@ -11,7 +9,7 @@ cd rep/
 nano t.py
 nano z.py
 ```
-### Inicia repositório
+### Inicializa repositório
 ```
 git init
 ```
