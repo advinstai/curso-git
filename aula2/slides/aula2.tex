@@ -116,6 +116,8 @@
 \end{itemize}
 }
 
+\SliSubTit{Centralized Workflow}{}
+
 \SliT{Fluxo de trabalho centralizado}{
 \begin{itemize}
 
@@ -413,6 +415,250 @@ Unmerged paths:
 
 \end{SliTC}
 
+
+\begin{SliTC}{Fluxo de trabalho centralizado}
+\begin{itemize}
+
+    \iOn{Resolvendo conflitos (exemplo):}
+
+    \begin{itemize}
+    
+        \iTw{Continuando a operação de \texttt{rebase}}
+
+    \end{itemize}
+
+\end{itemize}
+
+\begin{CodeD}{bash}
+$ git rebase --continue
+\end{CodeD}
+
+\end{SliTC}
+
+
+\begin{SliTC}{Fluxo de trabalho centralizado}
+\begin{itemize}
+
+    \iOn{Resolvendo conflitos (exemplo):}
+
+    \begin{itemize}
+    
+        \iTw{Resultado do \texttt{rebase} no histórico de commits}
+
+    \end{itemize}
+
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale=.25]{img/git-fluxo-centralizado-conflito8.png}
+\end{center}
+
+\end{SliTC}
+
+\SliSubTit{Feature Branch Workflow}{}
+
+
+\SliT{Fluxo de trabalho de Branch por Feature}{
+\begin{itemize}
+
+    \iOn{Focado no modelo de branch}
+
+    \iOn{Desenvolvimento de \textit{features} deve ocorrer em um branch
+        dedicado}
+
+    \iOn{Facilita o trabalho em uma \textit{feature} específica sem interromper
+        a principal base de código}
+
+    \iOn{\textbf{branch principal nunca vai conter um código quebrado}}
+
+    \iOn{\textit{pull requests} para iniciar discussões em torno de um branch}
+
+    \iOn{Dão a outros desenvolvedores a oportunidade de aprovar um recurso
+        antes que ele seja integrado ao projeto oficial}
+
+\end{itemize}
+}
+
+\SliT{Fluxo de trabalho de Branch por Feature}{
+\begin{itemize}
+
+    \iOn{O \textit{branch} principal representa o histórico oficial do projeto}
+
+    \iOn{desenvolvedores criam um novo branch sempre que começam a trabalhar em
+        uma nova \textit{feature}}
+
+    \iOn{Os branches dos recursos devem ter nomes descritivos:}
+
+    \begin{itemize}
+    
+        \iTw{\texttt{issue-\#1061}}
+
+        \iTw{\texttt{carregamento-de-dados}}
+    
+    \end{itemize}
+
+    \iOn{Dar um objetivo claro e bastante focado a cada \textit{branch}}
+
+    \iOn{Os branches de \textit{features} devem ser enviados para o repositório
+        remoto}
+
+\end{itemize}
+}
+
+
+\begin{SliTC}{Fluxo de trabalho de Branch por Feature}
+\begin{itemize}
+
+    \iOn{Passo-a-passo}
+
+    \begin{itemize}
+    
+        \iTw{Certificar-se que o branch \texttt{master} está atualizado com a
+            cópia remota}
+    
+        \iTw{\texttt{git reset --hard origin/master} vai limpar todas as
+            modificações locais feitas na branch \texttt{master}}
+
+    \end{itemize}
+
+\end{itemize}
+
+
+\begin{CodeD}{bash}
+$ git checkout master
+$ git fetch origin
+$ git reset --hard origin/master
+\end{CodeD}
+
+\end{SliTC}
+
+
+\begin{SliTC}{Fluxo de trabalho de Branch por Feature}
+\begin{itemize}
+
+    \iOn{Passo-a-passo}
+
+    \begin{itemize}
+    
+        \iTw{Criar nova branch baseada na \texttt{master} para a nova
+            \textit{feature}}
+
+    \end{itemize}
+
+\end{itemize}
+
+
+\begin{CodeD}{bash}
+$ git checkout -b nova-feature
+\end{CodeD}
+
+\end{SliTC}
+
+
+\begin{SliTC}{Fluxo de trabalho de Branch por Feature}
+\begin{itemize}
+
+    \iOn{Passo-a-passo}
+
+    \begin{itemize}
+    
+        \iTw{Escrever modificações, adicioná-las e realizar o \textit{commit}}
+
+    \end{itemize}
+
+\end{itemize}
+
+
+\begin{CodeD}{bash}
+$ git add <arquivo>
+$ git commit -m "Mensagem de Commit"
+\end{CodeD}
+
+\end{SliTC}
+
+
+\begin{SliTC}{Fluxo de trabalho de Branch por Feature}
+\begin{itemize}
+
+    \iOn{Passo-a-passo}
+
+    \begin{itemize}
+    
+        \iTw{Enviar branch do recurso para repositório remoto}
+
+    \end{itemize}
+
+\end{itemize}
+
+
+\begin{CodeD}{bash}
+$ git push -u origin nova-feature
+\end{CodeD}
+
+\end{SliTC}
+
+
+\SliT{Fluxo de trabalho de Branch por Feature}{
+\begin{itemize}
+
+    \iOn{Passo-a-passo}
+
+    \begin{itemize}
+    
+        \iTw{Criando \textit{pull-request}}
+    
+    \end{itemize}
+
+\end{itemize}
+\begin{center}
+    \begin{center}
+        \includegraphics[scale=.4]{img/git-fluxo-feature-branch1.png}
+    \end{center}
+\end{center}
+
+}
+
+
+\SliT{Fluxo de trabalho de Branch por Feature}{
+\begin{itemize}
+
+    \iOn{Passo-a-passo}
+
+    \begin{itemize}
+    
+        \iTw{Criando \textit{pull-request}}
+    
+    \end{itemize}
+
+\end{itemize}
+\begin{center}
+    \begin{center}
+        \includegraphics[scale=.4]{img/git-fluxo-feature-branch2.png}
+    \end{center}
+\end{center}
+
+}
+
+
+\SliT{Fluxo de trabalho de Branch por Feature}{
+\begin{itemize}
+
+    \iOn{Passo-a-passo}
+
+    \begin{itemize}
+    
+        \iTw{Aceitando \textit{pull-request}}
+    
+    \end{itemize}
+
+\end{itemize}
+\begin{center}
+    \begin{center}
+        \includegraphics[scale=.4]{img/git-fluxo-feature-branch3.png}
+    \end{center}
+\end{center}
+
+}
 
 
 
