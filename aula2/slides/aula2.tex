@@ -660,71 +660,250 @@ $ git push -u origin nova-feature
 
 }
 
+\SliT{Fluxo de trabalho de Branch por Feature}{
+\begin{itemize}
+
+    \iOn{Caso a branch da nova \textit{feature} esteja atrás da
+        \textit{master}}
+
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale=.35]{img/git-fluxo-feature-branch-rebase1.png}
+\end{center}
+
+}
 
 
-\begin{SliTC}{Ruby Code - Solarized Light Palette}
-    \begin{CodeL}{ruby}
-case node[:platform] # node info
-when "debian", "ubuntu"
-  package "git-core" # package is a resource
-else 
-  package "git"
-end
-    \end{CodeL}
-    Texto
-\end{SliTC}
+\SliT{Fluxo de trabalho de Branch por Feature}{
+\begin{itemize}
 
-\begin{SliTC}{Shell Code - Solarized Dark Palette}
-    \begin{CodeD2}{bash}
-#!/bin/bash
-echo "Printing text with newline"
-echo -n "Printing text without newline"
-echo -e "\nRemoving \t backslash \t characters\n"
-    \end{CodeD2}
-\end{SliTC}
+    \iOn{\texttt{rebase} para atualizar branch}
+
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale=.35]{img/git-fluxo-feature-branch-rebase2.png}
+\end{center}
+
+}
 
 
-\begin{SliTC}{Python Code - Monokai Palette}
-    \begin{CodeD}{python}
-# Python Program to calculate the square root
-# Note: change this value for a different result
-num = 8 
+\SliT{Fluxo de trabalho de Branch por Feature}{
+\begin{itemize}
 
-# To take the input from the user
-num = float(input('Enter a number: '))
+    \iOn{\textbf{A regra de ouro para o \texttt{rebase}}}
 
-num_sqrt = num ** 0.5
-print('The square root of %0.3f is %0.3f'%(num ,num_sqrt))
+    \begin{itemize}
+    
+        \iTw{{\color{red}Nunca realizar rebase em branches públicas!}}
+    
+    \end{itemize}
+
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale=.35]{img/git-fluxo-feature-branch-rebase3.png}
+\end{center}
+
+}
+
+
+\SliSubTit{Forking Workflow}{}
+
+\SliT{Fluxo de trabalho baseado em Forks}{
+\begin{itemize}
+
+    \iOn{No Forking Workflow o usuário possui dois repositórios: um
+        \textbf{privado (pessoal)} e um \textbf{publico (principal/central)}.}
+
+    \iOn{Conceito de ``validação e aprovação''}
+
+    \begin{itemize}
+    
+        \iTw{Focado na qualidade do projeto e no nível de abertura para
+            contribuições;}
+
+        \iTw{Colaboradores não precisam necessariamente de permissões para dar
+            push no repositório oficial}
+
+        \iTw{Submissão de \textit{Pull Requests} para o repositório principal}
+
+        \iTw{Após a revisão, correções são feitas no fork privado e agregando
+            alterações ao \textit{pull request}}
+    
+    \end{itemize}
+
+\end{itemize}
+}
+
+
+\SliT{Fluxo de trabalho baseado em Forks}{
+\begin{itemize}
+
+    \iOn{Como funciona?}
+
+    \begin{itemize}
+    
+        \iTw{Criando um fork no github.}
+    
+    \end{itemize}
+
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale=.5]{img/git-fluxo-fork1.png}
+\end{center}
+
+}
+
+
+
+\begin{SliTC}{Fluxo de trabalho baseado em Forks}
+
+\begin{itemize}
+
+    \iOn{Como funciona?}
+
+    \begin{itemize}
+    
+        \iTw{Clonar seu fork}
+    
+    \end{itemize}
+
+\end{itemize}
+
+
+    \begin{CodeD}{bash}
+$ git clone <repositorio do seu fork>
     \end{CodeD}
 \end{SliTC}
 
 
-\SliT{Title}{
-\secx{Section}
+\begin{SliTC}{Fluxo de trabalho baseado em Forks}
 
-\secxx{Sub-Section}
+\begin{itemize}
 
-% EXERCISE
-\exe{4}{Exercise}
-% SUGGESTED READING BOX			
-\sug{References}
-% CITATION						
-\cittex{Citation}
+    \iOn{Como funciona?}
 
-}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ###############################################################################
-% SLIDE DOUBLE COLUMN WITH TITLE
-\SliDT{Title}{First Column}{Second Column
+    \begin{itemize}
+    
+        \iTw{Adicionar novo repositório remoto (e.g., \texttt{upstream}}
+    
+    \end{itemize}
 
-}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ###############################################################################
-% SLIDE DOUBLE COLUMN NO TITLE
-\SliD{
-First Column}{
-    { \begin{center}
-    \includegraphics[scale=0.35]{AI2Logo.png}     
-    \end{center} }
+\end{itemize}
 
-}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ###############################################################################
+
+    \begin{CodeD}{bash}
+$ git remote add upstream <repositorio de onde você realizou o fork>
+    \end{CodeD}
+\end{SliTC}
+
+
+\begin{SliTC}{Fluxo de trabalho baseado em Forks}
+
+\begin{itemize}
+
+    \iOn{Como funciona?}
+
+    \begin{itemize}
+    
+        \iTw{Criar branch para nova \textit{feature}}
+    
+    \end{itemize}
+
+\end{itemize}
+
+
+    \begin{CodeD}{bash}
+$ git checkout -b nova-feature
+# Edit some code
+$ git commit -a -m "<Mensagem de Commit>"
+    \end{CodeD}
+\end{SliTC}
+
+
+\begin{SliTC}{Fluxo de trabalho baseado em Forks}
+
+\begin{itemize}
+
+    \iOn{Como funciona?}
+
+    \begin{itemize}
+    
+        \iTw{Enviar branch para o seu repositório privado remoto}
+    
+    \end{itemize}
+
+\end{itemize}
+
+
+    \begin{CodeD}{bash}
+$ git push origin nova-feature
+    \end{CodeD}
+\end{SliTC}
+
+
+\SliT{Fluxo de trabalho baseado em Forks}{
+\begin{itemize}
+
+    \iOn{Como funciona?}
+
+    \begin{itemize}
+    
+        \iTw{Criando um pull request}
+    
+    \end{itemize}
+
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale=.4]{img/git-fluxo-fork2.png}
+\end{center}
+
+}
+
+
+\SliT{Fluxo de trabalho baseado em Forks}{
+\begin{itemize}
+
+    \iOn{Como funciona?}
+
+    \begin{itemize}
+    
+        \iTw{Aprovando um pull request}
+    
+    \end{itemize}
+
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale=.25]{img/git-fluxo-fork3.png}
+\end{center}
+
+}
+
+
+\begin{SliTC}{Fluxo de trabalho baseado em Forks}
+
+\begin{itemize}
+
+    \iOn{Como funciona?}
+
+    \begin{itemize}
+    
+        \iTw{Atualizando branch com novas alterações enquanto você trabalha em
+            sua funcionalidade}
+    
+    \end{itemize}
+
+\end{itemize}
+
+
+    \begin{CodeD}{bash}
+$ git rebase upstream/master 
+    \end{CodeD}
+\end{SliTC}
+
 \end{document}
